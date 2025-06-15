@@ -29,7 +29,7 @@ const Contact = () => {
     };
 
     return (
-        <section id="contact" className="section">
+        <section id="contact" className="section" data-aos="fade-in">
             <div className="container text-center">
                 <h2>Contact Me</h2>
                 <form ref={form} onSubmit={sendEmail}>

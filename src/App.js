@@ -1,15 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
-
 import Skill from './components/Skill';
 import ProjectCard from './components/ProjectCard';
 import Contact from './components/Contact';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+
+
 
 
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false, 
+      anchorPlacement: 'top-bottom'
+    });
+  }, []);
   return (
     <div>
       {/* Navbar */}
@@ -33,7 +44,7 @@ function App() {
       </nav>
 
       {/* Home Section */}
-      <section id="home" className="section bg-primary text-white py-5">
+      <section id="home" className="section bg-primary text-white py-5" data-aos="fade-up">
         <div className="container">
           <div className="row align-items-center">
             {/* Text Section */}
@@ -58,7 +69,7 @@ function App() {
       </section>
 
 
-      <section id="about" className="section bg-light">
+      <section id="about" className="section bg-light" data-aos="fade-right">
         <div className="container">
           <div className="row align-items-center">
             <div className="col-md-6 text-center">
@@ -77,7 +88,7 @@ function App() {
 
 
       {/* Education Section */}
-      <section id="education" className="section bg-white py-5" style={{ background: "#f8fafc" }}>
+      <section id="education" className="section bg-white py-5" style={{ background: "#f8fafc" }} data-aos="zoom-in">
         <div className="container">
           <h2 className="text-center mb-5 fw-bold">🎓 My Education Journey</h2>
           <div className="row justify-content-center">
@@ -120,7 +131,7 @@ function App() {
 
 
       {/* Skills Section */}
-      <section id="skills" className="py-5 bg-light">
+      <section id="skills" className="py-5 bg-light" data-aos="zoom-in">
         <div className="container">
           <h2 className="text-center mb-5">
             <i className="bi bi-stars me-2"></i>
@@ -129,7 +140,7 @@ function App() {
           </h2>
 
           <div className="row">
-            <div className="col-md-4 mb-4">
+            <div className="col-md-4 mb-4" data-aos="flip-right">
               <h5 className="text-primary mb-3">Frontend</h5>
               <Skill label="HTML" percent={90} />
               <Skill label="CSS" percent={85} />
@@ -137,14 +148,14 @@ function App() {
               <Skill label="React.js" percent={50} />
               <Skill label="Bootstrap" percent={75} />
             </div>
-            <div className="col-md-4 mb-4">
+            <div className="col-md-4 mb-4" data-aos="flip-right">
               <h5 className="text-success mb-3">Backend</h5>
               <Skill className="progress-bar bg-success" label="Node.js" percent={50} />
-              <Skill className="progress-bar bg-success" label="MongoDB" percent={75} />
-              <Skill className="progress-bar bg-success" label="Python" percent={55} />
+              <Skill className="progress-bar bg-success" label="MongoDB" percent={40} />
+              <Skill className="progress-bar bg-success" label="Python" percent={60} />
               <Skill className="progress-bar bg-success" label="Java" percent={30} />
             </div>
-            <div className="col-md-4 mb-4">
+            <div className="col-md-4 mb-4" data-aos="flip-right">
               <h5 className="text-secondary mb-3">Tools & Others</h5>
               <Skill className="progress-bar bg-secondary" label="Git & GitHub" percent={70} />
               <Skill className="progress-bar bg-secondary" label="VS Code" percent={80} />
@@ -155,28 +166,28 @@ function App() {
       </section>
 
       {/* Projects */}
-      <section id="projects" className="section bg-light py-5">
+      <section id="projects" className="section bg-light py-5" data-aos="fade-up">
         <div className="container text-center">
           <h2 className="mb-5 fw-bold">
             <i className="bi bi-folder2-open me-2"></i>
             Projects
           </h2>
           <div className="row">
-            <ProjectCard
+            <ProjectCard data-aos="zoom-in-up"
               title="Chatroom App"
               imgSrc="./Chatroom.png"
               description="A real-time chat application where multiple users can join a shared room and exchange messages instantly. Built using Node.js and Socket.IO, this project showcases my skills in building interactive back-and-forth communication between users without page reloads."
               githubLink="https://github.com/ArumugaThangaraj/CodeClauseInternship_Project-Chatroom"
-              linkedinLink="https://linkedin.com/in/yourprofile"
+              linkedinLink="https://www.linkedin.com/in/arumuga-thangaraj123/recent-activity/all/"
             />
-            <ProjectCard
+            <ProjectCard data-aos="zoom-in-up"
               title="News Aggregator"
               imgSrc="./Newsaggregator.png"
               description="A web-based tool that fetches and displays the latest news articles from various sources using the News API. Users can filter news by categories like technology, sports, and health. It focuses on delivering up-to-date content in a clean and user-friendly interface."
               githubLink="https://github.com/ArumugaThangaraj/CodeClauseInternship_Project_NewsApp"
-              linkedinLink="https://linkedin.com/in/yourprofile"
+              linkedinLink="https://www.linkedin.com/in/arumuga-thangaraj123/recent-activity/all/"
             />
-            <ProjectCard
+            <ProjectCard data-aos="zoom-in-up"
               title="Migrant Support Hub"
               imgSrc="./Migrant Workers.jpg"
               description="Migrant Support Hub is a user-friendly web platform designed to assist migrant workers by providing streamlined access to essential services such as complaint registration, helpline support, legal assistance, and community interaction. The platform allows users to submit and track complaints, engage in public discussions, access important updates, and connect with support providers efficiently."
@@ -188,10 +199,10 @@ function App() {
       </section>
       <>
         {/* Contact Section */}
-         <Contact />
+        <Contact />
       </>
-       
-      
+
+
 
       {/* Footer */}
       <footer className="bg-dark text-white text-center py-3 mt-5">
