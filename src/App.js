@@ -10,9 +10,6 @@ import 'aos/dist/aos.css';
 
 
 
-
-
-
 function App() {
   useEffect(() => {
     AOS.init({
@@ -26,7 +23,7 @@ function App() {
       {/* Navbar */}
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div className="container">
-          <a className="navbar-brand" href="#">My Portfolio</a>
+          <a className="navbar-brand" href="/">My Portfolio</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span className="navbar-toggler-icon"></span>
           </button>
