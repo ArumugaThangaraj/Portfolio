@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import './App.css';
 import Skill from './components/Skill';
 import ProjectCard from './components/ProjectCard';
 import Contact from './components/Contact';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+
 
 
 
