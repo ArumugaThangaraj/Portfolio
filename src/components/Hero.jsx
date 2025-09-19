@@ -1,6 +1,5 @@
 import "../App.css";
 import { Container, Row, Col } from "react-bootstrap";
-import image from "../assets/img1.png";
 
 
 const Hero = () => {
@@ -20,7 +19,7 @@ const Hero = () => {
               <a href="#projects" className="btn">
                 View My Work
               </a>
-              <a href="/resume.pdf" download className="btn secondary">
+              <a href="../assets/Resume-1.pdf" download className="btn secondary">
                 Download Resume
               </a>
             </div>
