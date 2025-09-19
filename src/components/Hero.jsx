@@ -9,7 +9,7 @@ const Hero = () => {
         <Row className="align-items-center">
           <Col className="hero-content text-center mt-4">
             <h1 className="hero-title">
-              I’m <span className="highlight ">Arumuga Thangaraj</span>
+              I’m <span className="highlight">Arumuga Thangaraj</span>
             </h1>
             <h2>Web Developer</h2>
             <p>
@@ -19,7 +19,7 @@ const Hero = () => {
               <a href="#projects" className="btn">
                 View My Work
               </a>
-              <a href="../assets/Resume-1.pdf" download className="btn secondary">
+              <a href="/Resume-1.pdf" download className="btn secondary">
                 Download Resume
               </a>
             </div>

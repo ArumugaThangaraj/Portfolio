@@ -18,7 +18,7 @@ const About = () => {
             <p>
               I'm currently focused on expanding my portfolio with practical projects like a Weather App, BMI Calculator, and Currency Converter—each designed to showcase both functionality and visual polish. I'm actively seeking opportunities to contribute to dynamic teams and grow as a developer.
             </p>
-            <a href="#skills" className="btn">
+            <a href="#skills" className="btn ">
               View My Skills
             </a>
           </Col>

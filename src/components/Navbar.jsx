@@ -7,7 +7,7 @@ const MyNavbar = () => {
     <Navbar expand="lg" fixed="top" className="c-navbar">
       <Container>
         <Navbar.Brand href="#home" className="brand">
-          Luffy
+          Portfolio
         </Navbar.Brand>
         <Navbar.Toggle className="toggle-btn" aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
