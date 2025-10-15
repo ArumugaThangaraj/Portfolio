@@ -52,8 +52,8 @@ export default function Projects() {
         <h2 className="section-title">My Projects</h2>
         <Row>
           {projects.map((project, index) => (
-            <Col md={6} sm={6} xs={12} key={index} className="mb-5 d-flex justify-content-center">
-              <Card className="project-card">
+            <Col md={6} sm={6} xs={12} key={index} className="mb-5">
+              <Card className="project-card mx-auto">
                 <Card.Img variant="top" src={project.image} />
                 <Card.Body className="text-center">
                   <Card.Title>{project.title}</Card.Title>

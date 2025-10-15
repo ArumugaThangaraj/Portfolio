@@ -14,14 +14,24 @@ const Skills = () => {
 
       ]
     },
+
     {
       title: "Frameworks & Programming",
       skills: [
-        { name: "Bootstrap", level:50 },
-        { name: "Next.js", level: 30},
+        { name: "Bootstrap", level: 50 },
+        { name: "Next.js", level: 30 },
         { name: "Tailwind CSS", level: 40 },
         { name: "Python", level: 40 }
-            
+
+      ]
+    },
+    {
+      title: "Backend Development",
+      skills: [
+        { name: "Node.js", level: 40 },
+        { name: "Express", level: 20 },
+        { name: "Firebase", level: 30 }
+
       ]
     },
     {
@@ -33,16 +43,17 @@ const Skills = () => {
 
       ]
     }
+
   ];
 
   return (
     <section className="skills" id="skills">
       <Container>
         <h2 className="text-center">My Skills</h2>
-        <Row>
+        <Row className="mt-4">
           {skillCategories.map((category, index) => (
-            <Col md={4} key={index} className="mb-4">
-              <Card className="skill-card">
+            <Col md={6} key={index} className="mb-4">
+              <Card className="skill-card  mx-auto">
                 <Card.Body>
                   <Card.Title className="skill-title">{category.title}</Card.Title>
                   {category.skills.map((skill, idx) => (
