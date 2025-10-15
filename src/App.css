@@ -62,6 +62,7 @@
   display: inline-block;
   padding: 0.8rem 1.5rem;
   margin-right: 1rem;
+  width: 12rem;
   background: #4da6ff;
   color: white;
   border-radius: 5px;
@@ -171,8 +172,8 @@
   font-weight: bold;
   color: #4da6ff;
 }
-
 .project-card {
+  max-width: 450px;
   border: none;
   border-radius: 15px;
   background: #ffffff;
@@ -307,7 +308,9 @@ form label {
 
 .footer-links a:hover {
   color: #3399ff;
+  border-radius: 50%;
   box-shadow: 0px 0px 10px rgba(77, 166, 255, 0.5);
+  
 }
 
 /* Responsive Design */
@@ -337,6 +340,7 @@ form label {
     color: white;
     border-radius: 5px;
     padding: 0.4rem 0.6rem;
+    font-size: 0.8rem;
   }
 
   .toggle-btn:hover {
@@ -395,9 +399,5 @@ form label {
   .footer-links {
     flex-direction: column;
     gap: 0.5rem;
-  }
-
-  .footer-links a {
-    font-size: 1rem;
   }
 }

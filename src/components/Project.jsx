@@ -18,7 +18,6 @@ const projects = [
     title: "Chat Application",
     description: "A real-time chat app using HTML,CSS, JavaScript, Socket.io, and Node.js for instant messaging.",
     image: projectChat,
-    liveLink: "https://chatapp-demo.com",
     codeLink: "https://github.com/ArumugaThangaraj/CodeClauseInternship_Project-Chatroom"
   },
   {
@@ -29,12 +28,12 @@ const projects = [
     codeLink: "https://github.com/ArumugaThangaraj/WeatherApp"
   },
   {
-  title: "BMI Calculator",
-  description: "A simple BMI calculator that computes Body Mass Index from user inputs of height and weight, and classifies the result as underweight, normal, overweight, or obese.",
-  image: projectBMI,
-  liveLink: "bmi-calculator-kappa-three.vercel.app",
-  codeLink: "https://github.com/ArumugaThangaraj/BMI-Calculator"
-}
+    title: "BMI Calculator",
+    description: "A simple BMI calculator that computes Body Mass Index from user inputs of height and weight, and classifies the result as underweight, normal, overweight, or obese.",
+    image: projectBMI,
+    liveLink: "bmi-calculator-kappa-three.vercel.app",
+    codeLink: "https://github.com/ArumugaThangaraj/BMI-Calculator"
+  }
 ];
 
 export default function Projects() {
@@ -53,28 +52,37 @@ export default function Projects() {
         <h2 className="section-title">My Projects</h2>
         <Row>
           {projects.map((project, index) => (
-            <Col md={4} sm={6} xs={12} key={index} className="mb-4">
+            <Col md={6} sm={6} xs={12} key={index} className="mb-5 d-flex justify-content-center">
               <Card className="project-card">
                 <Card.Img variant="top" src={project.image} />
                 <Card.Body className="text-center">
                   <Card.Title>{project.title}</Card.Title>
-                  <div className="d-flex justify-content-center gap-2">
-                    <Button
-                      variant="success"
-                      size="sm"
-                      href={project.liveLink}
-                      target="_blank"
-                    >
-                      Live
-                    </Button>
-                    <Button
-                      variant="success"
-                      size="sm"
-                      onClick={() => handleShow(project)}
-                    >
-                      Details
-                    </Button>
-                  </div>
+                  {index !== 1 ? (
+                    <div className="d-flex justify-content-center gap-2">
+                      <Button
+                        variant="success"
+                        size="sm"
+                        href={project.liveLink}
+                        target="_blank"
+                      >
+                        Live
+                      </Button>
+                      <Button
+                        variant="success"
+                        size="sm"
+                        onClick={() => handleShow(project)}
+                      >
+                        Details
+                      </Button>
+                    </div>
+                  ) :  <Button
+            variant="success"
+            href={selectedProject?.codeLink}
+            target="_blank"
+          >
+            View Code
+          </Button>}
+
                 </Card.Body>
               </Card>
             </Col>
@@ -113,6 +121,6 @@ export default function Projects() {
           </Button>
         </Modal.Footer>
       </Modal>
-    </section>
+    </section >
   );
 }

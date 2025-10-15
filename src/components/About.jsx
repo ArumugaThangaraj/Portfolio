@@ -10,7 +10,7 @@ const About = () => {
           <Col md={8} className="about-content">
             <h2>About Me</h2>
             <p>
-              I'm Joy, a Computer Science graduate with a strong foundation in front-end development and a keen eye for design. I specialize in building responsive, user-friendly web interfaces using HTML, CSS, JavaScript, React, and Vite.
+              I'm Arumuga Thangaraj, a Computer Science graduate with a strong foundation in front-end development and a keen eye for design. I specialize in building responsive, user-friendly web interfaces using HTML, CSS, JavaScript, React, and Next.js.
             </p>
             <p>
               My passion lies in crafting elegant layouts, solving real-world problems through code, and continuously learning new technologies. Whether it's refining UI/UX details or debugging tricky components, I approach challenges with curiosity and persistence.
